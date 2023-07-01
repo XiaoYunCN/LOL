@@ -18,7 +18,7 @@ wait(1)
 --服务器
 if game.PlaceId == 3101667897 then --极速传奇
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E6%9E%81%E9%80%9FV2.0.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/7.lua"))()
 
 elseif game.PlaceId == 8908228901 then
 	--鲨2
