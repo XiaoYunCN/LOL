@@ -4,7 +4,7 @@ local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "云",
-    Text = "正在加载（反挂机已开启）",
+    Text = "等着加载",
     Duration = 10, 
 })
 print("Anti Afk On")
@@ -60,21 +60,6 @@ CoreGui:SetCore("SendNotification", {
 
 CoreGui:SetCore("SendNotification", {
     Title = "作者 小云~",
-    Text = "",
+    Text = "开启反挂机",
     Duration = 5, 
 })
-
-game.Players.ChildAdded:Connect(function(player)
-    if not pcall (function()
-    notify("玩家加入",""..player.Name.." 加入了这个服务器",tx,5 )
-    end) then
-      print ("Hello word")
-    end
-end)
-game.Players.ChildRemoved:Connect(function(player)
-    if not pcall (function()
-    notify("玩家离开",""..player.Name.." 离开了这个服务器",tx,5 )
-    end) then
-      print ("Hello word")
-    end
-end)
