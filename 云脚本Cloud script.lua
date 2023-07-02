@@ -4,7 +4,7 @@ local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "云",
-    Text = "等着加载",
+    Text = "等暂加载",
     Duration = 10, 
 })
 print("Anti Afk On")
