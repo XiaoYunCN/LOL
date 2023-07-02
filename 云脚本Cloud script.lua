@@ -1,11 +1,9 @@
---小老弟，你真黑人😡😡
---小学生喜欢源码=你妈死了
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "云",
     Text = "等暂加载",
-    Duration = 10, 
+    Duration = 5, 
 })
 print("Anti Afk On")
 		local vu = game:GetService("VirtualUser")
@@ -18,10 +16,19 @@ wait(1)
 --服务器
 if game.PlaceId == 3101667897 then --极速传奇
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/7.lua"))()
+   CoreGui:SetCore("SendNotification", {
+    Title = "云",
+    Text = "成功支持极速传奇",
+    Duration = 5, 
+}) loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/7.lua"))()
 
 elseif game.PlaceId == 8908228901 then
 	--鲨2
+CoreGui:SetCore("SendNotification", {
+    Title = "云",
+    Text = "成功支持鲨口生求2",
+    Duration = 5, 
+})
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E9%B2%A8%E5%8F%A3%E7%94%9F%E6%B1%822.lua", true))()
 
 elseif game.PlaceId == 155615604 then
@@ -47,8 +54,11 @@ elseif game.PlaceId == 537413528 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/4.lua", true))()
 
 elseif game.PlaceId == 3623096087 then --力量传奇
-
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E5%8A%9B%E9%87%8FV2.1.lua"))()
+CoreGui:SetCore("SendNotification", {
+    Title = "云",
+    Text = "成功支持力量传奇",
+    Duration = 5, 
+}) loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E5%8A%9B%E9%87%8FV2.1.lua"))()
 
 	
 else --白灰脚本
