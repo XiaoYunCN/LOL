@@ -1,3 +1,41 @@
+
+
+local notificationGui = Instance.new("ScreenGui")
+notificationGui.Enabled = true  
+notificationGui.IgnoreGuiInset = true 
+
+local notificationFrame = Instance.new("Frame")
+notificationFrame.Size = UDim2.new(0, 200, 0, 50)
+notificationFrame.Position = UDim2.new(0.5, -100, 1, -50) 
+notificationFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+notificationFrame.Parent = notificationGui
+
+local notificationText = Instance.new("TextLabel")
+notificationText.Size = UDim2.new(1, 0, 1, 0)
+notificationText.Position = UDim2.new(0, 0, 0, 0)
+notificationText.BackgroundColor3 = Color3.new(1, 1, 1)
+notificationText.TextColor3 = Color3.new(0, 0, 0)
+notificationText.Text = "执行成功，云脚本谢谢你"
+notificationText.Font = Enum.Font.SourceSansBold
+notificationText.FontSize = Enum.FontSize.Size24
+notificationText.TextScaled = true
+notificationText.Parent = notificationFrame
+
+local function animateNotification()
+    local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0)
+    local tween = game:GetService("TweenService"):Create(notificationFrame, tweenInfo, {Position = UDim2.new(0.5, -100, 0.8, -50)})
+    tween:Play()
+    wait(3)
+    tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0)
+    tween = game:GetService("TweenService"):Create(notificationFrame, tweenInfo, {Position = UDim2.new(0.5, -100, 1, -50)})
+    tween:Play()
+    wait(1)
+    notificationGui:Destroy()
+end
+
+notificationGui.Parent = game.Players.LocalPlayer.PlayerGui
+animateNotification()
+
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
