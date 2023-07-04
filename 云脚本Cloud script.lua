@@ -64,6 +64,15 @@ elseif game.PlaceId == 8908228901 then
 	--鲨2
 CoreGui:SetCore("SendNotification", {
     Title = "云",
+    Text = "成功支持彩虹好友",
+    Duration = 5, 
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E5%BD%A9%E8%99%B9%E5%A5%BD%E5%8F%8B.lua", true))()
+
+elseif game.PlaceId == 8908228901 then
+	--鲨2
+CoreGui:SetCore("SendNotification", {
+    Title = "云",
     Text = "成功支持鲨口生求2",
     Duration = 5, 
 })
