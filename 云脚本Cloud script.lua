@@ -1,4 +1,4 @@
-
+--你妈妈呢
 
 local notificationGui = Instance.new("ScreenGui")
 notificationGui.Enabled = true  
