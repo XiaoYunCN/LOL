@@ -490,8 +490,8 @@ mine.MouseButton1Down:connect(function()
 		end
 end)
 end)
-else --白灰脚本
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/1145141.lua"))()
+else --其他通用
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E5%85%B6%E4%BB%96%E9%80%9A%E7%94%A8.lua"))()
     
 end
 
