@@ -77,7 +77,7 @@ elseif game.PlaceId == 10023052234 then
     Title = "云",
     Text = "成功支持Evade",
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/Evade.lua", true))() = 5, 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/Evade.lua", true))() 
 })
 elseif game.PlaceId == 3956818381 then --忍者传奇
    CoreGui:SetCore("SendNotification", {
