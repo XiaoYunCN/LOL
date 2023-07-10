@@ -124,7 +124,7 @@ end
 
 CoreGui:SetCore("SendNotification", {
     Title = "作者 小云~",
-    Text = "已启反挂机,
+    Text = "已启反挂机",
     Duration = 5, 
 })
 
