@@ -15,7 +15,7 @@ notificationText.Size = UDim2.new(1, 0, 1, 0)
 notificationText.Position = UDim2.new(0, 0, 0, 0)
 notificationText.BackgroundColor3 = Color3.new(1, 1, 1)
 notificationText.TextColor3 = Color3.new(0, 0, 0)
-notificationText.Text = "执行成功，云V1.3"
+notificationText.Text = "执行成功，云V1.4"
 notificationText.Font = Enum.Font.SourceSansBold
 notificationText.FontSize = Enum.FontSize.Size24
 notificationText.TextScaled = true
@@ -123,13 +123,24 @@ else --其他通用
 end
 
 CoreGui:SetCore("SendNotification", {
-    Title = "云脚本",
-    Text = "欢迎来到云脚本！",
-    Duration = 3, 
-})
-
-CoreGui:SetCore("SendNotification", {
     Title = "作者 小云~",
-    Text = "开启反挂机",
+    Text = "已启反挂机,
     Duration = 5, 
 })
+
+coroutine.wrap(VIEO_fake_script)()
+game.Players.ChildAdded:Connect(function(player)
+    if not pcall (function()
+    SendNotification("玩家加入",""..player.Name.." 加入了游戏",5 )
+    end) then
+      print ("Error")
+    end
+    end)
+    SendNotification("欢迎",""..game.Players.LocalPlayer.Name.." 欢迎使用云脚本",10)
+    game.Players.ChildRemoved:Connect(function(player)
+        if not pcall (function()
+        SendNotification("玩家离开",""..player.Name.." 离开了游戏",4.4 )
+        end) then
+          print ("Error")
+        end
+        end)
