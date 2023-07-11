@@ -69,8 +69,8 @@ CoreGui:SetCore("SendNotification", {
 })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E9%B2%A8%E5%8F%A3%E7%94%9F%E6%B1%822.lua", true))()
 
-elseif game.PlaceId ==  then
-	6516141723
+elseif game.PlaceId == 6516141723 then
+	
 CoreGui:SetCore("SendNotification", {
     Title = "云",
     Text = "成功支持Doors",
