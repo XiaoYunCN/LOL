@@ -69,6 +69,15 @@ CoreGui:SetCore("SendNotification", {
 })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E9%B2%A8%E5%8F%A3%E7%94%9F%E6%B1%822.lua", true))()
 
+elseif game.PlaceId ==  then
+	6516141723
+CoreGui:SetCore("SendNotification", {
+    Title = "云",
+    Text = "成功支持Doors",
+    Duration = 5, 
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/Doors%20Script.lia", true))()
+
 elseif game.PlaceId == 155615604 then
 	
 loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Xiao-Yun-UWU/main/%E7%9B%91%E6%8E%A7.lua",true))()
