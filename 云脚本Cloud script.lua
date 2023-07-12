@@ -5,16 +5,16 @@ notificationGui.Enabled = true
 notificationGui.IgnoreGuiInset = true 
 
 local notificationFrame = Instance.new("Frame")
-notificationFrame.Size = UDim2.new(0, 200, 0, 50)
-notificationFrame.Position = UDim2.new(0.5, -100, 1, -50) 
-notificationFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+notificationFrame.Size = UDim2.new(0, 200, 0, 50)--大小
+notificationFrame.Position = UDim2.new(0.5, -100, 1, -50) --位置
+notificationFrame.BackgroundColor3 = Color3.new(1, 1, 1)--背景颜色3
 notificationFrame.Parent = notificationGui
 
 local notificationText = Instance.new("TextLabel")
-notificationText.Size = UDim2.new(1, 0, 1, 0)
-notificationText.Position = UDim2.new(0, 0, 0, 0)
-notificationText.BackgroundColor3 = Color3.new(1, 1, 1)
-notificationText.TextColor3 = Color3.new(0, 0, 0)
+notificationText.Size = UDim2.new(1, 0, 1, 0)--大小
+notificationText.Position = UDim2.new(0, 0, 0, 0)--位置
+notificationText.BackgroundColor3 = Color3.new(1, 1, 1)--背景颜色3
+notificationText.TextColor3 = Color3.new(0, 0, 0)--文本颜色3
 notificationText.Text = "执行成功，云V1.51"
 notificationText.Font = Enum.Font.SourceSansBold
 notificationText.FontSize = Enum.FontSize.Size24
@@ -29,7 +29,7 @@ local function animateNotification()
     tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0)
     tween = game:GetService("TweenService"):Create(notificationFrame, tweenInfo, {Position = UDim2.new(0.5, -100, 1, -50)})
     tween:Play()
-    wait(1)
+    wait(1)--停止
     notificationGui:Destroy()
 end
 
