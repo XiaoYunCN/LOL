@@ -15,7 +15,7 @@ notificationText.Size = UDim2.new(1, 0, 1, 0)
 notificationText.Position = UDim2.new(0, 0, 0, 0)
 notificationText.BackgroundColor3 = Color3.new(1, 1, 1)
 notificationText.TextColor3 = Color3.new(0, 0, 0)
-notificationText.Text = "执行成功，云V1.5"
+notificationText.Text = "执行成功，云V1.51"
 notificationText.Font = Enum.Font.SourceSansBold
 notificationText.FontSize = Enum.FontSize.Size24
 notificationText.TextScaled = true
@@ -133,10 +133,36 @@ end
 
 CoreGui:SetCore("SendNotification", {
     Title = "作者 小云~",
-    Text = "已启反挂机",
+    Text = "QQ168777105",
     Duration = 5, 
 })
 
+coroutine.wrap(CGSLH_fake_script)()
+local function VIEO_fake_script() 
+	local script = Instance.new('LocalScript', CNM)
+
+	local CNM=script.Parent
+	local Mini=CNM.Mini
+	local Close=CNM.Close
+	local main=CNM.Mian
+	main.Visible=false
+	
+	Close.MouseButton1Click:Connect(function()
+		CNM.Parent:Destroy()
+	end)
+	main.Size=UDim2.new(1, 0,0.02, 0)
+	CNM.Active=true
+	CNM.Draggable=true
+	Mini.MouseButton1Click:Connect(function()
+		if main.Visible==false then
+			main.Visible=true
+			main:TweenSize(UDim2.new(1, 0,13.647, 0),"Out","Sine",0.15)
+		else
+			main:TweenSize(UDim2.new(1, 0,0.02, 0),"Out","Sine",0.15)
+			main.Visible=false
+		end
+	end)
+end
 coroutine.wrap(VIEO_fake_script)()
 game.Players.ChildAdded:Connect(function(player)
     if not pcall (function()
