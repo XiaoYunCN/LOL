@@ -15,7 +15,7 @@ notificationText.Size = UDim2.new(1, 0, 1, 0)
 notificationText.Position = UDim2.new(0, 0, 0, 0)
 notificationText.BackgroundColor3 = Color3.new(1, 1, 1)
 notificationText.TextColor3 = Color3.new(0, 0, 0)
-notificationText.Text = "执行成功，云V1.4"
+notificationText.Text = "执行成功，云V1.5"
 notificationText.Font = Enum.Font.SourceSansBold
 notificationText.FontSize = Enum.FontSize.Size24
 notificationText.TextScaled = true
@@ -40,7 +40,7 @@ local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "云",
-    Text = "等暂加载",
+    Text = "云脚本正在加载",
     Duration = 5, 
 })
 print("Anti Afk On")
