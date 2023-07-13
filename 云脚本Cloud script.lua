@@ -120,6 +120,145 @@ CoreGui:SetCore("SendNotification", {
 })
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E5%AF%BB%E5%AE%9D%E6%A8%A1%E6%8B%9F%E5%99%A8.lua", true))()
+elseif game.PlaceId == 1318971886  then
+
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/LOL/main/Orion.lua", true))()
+
+local Window = OrionLib:MakeWindow({Name = "Cloud Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "rbxassetid://6015897843", IntroEnabled = false})
+
+local Main = Window:MakeTab({
+	Name = "主要的",
+	Icon = "rbxassetid://6015897843",
+	PremiumOnly = false
+})
+
+local Role = Window:MakeTab({
+	Name = "角色",
+	Icon = "rbxassetid://6015897843",
+	PremiumOnly = false
+})
+
+local Deliver = Window:MakeTab({
+	Name = "传送",
+	Icon = "rbxassetid://6015897843",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "炸薯条",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Chips")
+end)
+})
+
+Main:AddButton({
+	Name = "可乐",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("BloxyCola")
+})
+
+Main:AddButton({
+	Name = "苹果",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Apple")
+})
+
+Main:AddButton({
+	Name = "披萨",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Pizza2")
+end)
+})
+
+Main:AddButton({
+	Name = "饼干",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cookie")
+})
+
+Main:AddButton({
+	Name = "医疗包",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("MedKit")
+})
+
+Main:AddButton({
+	Name = "Bat",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Bat")
+})
+
+Main:AddButton({
+	Name = "泰迪熊",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("TeddyBloxpin")
+})
+
+Main:AddButton({
+	Name = "剑",
+	Callback = function()
+game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword")
+})
+Role:AddButton({
+	Name = "警察",
+	Callback = function()
+local A_1 = "Gun"
+local A_2 = true
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+Event:FireServer(A_1, A_2)
+})
+
+Role:AddButton({
+	Name = "猛击",
+	Callback = function()
+local A_1 = "SwatGun"
+local A_2 = true
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+Event:FireServer(A_1, A_2)
+})
+
+Deliver:AddButton({
+	Name = "传送🗺️",
+	Callback = function()
+
+})
+
+Deliver:AddButton({
+	Name = "老板房间",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, -287, -1480)
+})
+
+Deliver:AddButton({
+	Name = "下水道",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(129, 3, -125)
+})
+
+Deliver:AddButton({
+	Name = "商店",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-422, 3, -121)
+})
+
+Deliver:AddButton({
+	Name = "顶楼",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16, 35, -220)
+})
+
+Deliver:AddButton({
+	Name = "房子",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 3, -200)
+})
+
+Deliver:AddButton({
+	Name = "地下室",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71, -15, -163)
+})
+
 elseif game.PlaceId == 1701332290 then
 	--服务号1701332290
 
