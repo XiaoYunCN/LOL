@@ -148,7 +148,7 @@ Main:AddButton({
 	Name = "炸薯条",
 	Callback = function()
 game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Chips")
-end)
+end
 })
 
 Main:AddButton({
@@ -158,13 +158,15 @@ game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("BloxyCola")
 
 
 
-end
+
+
 })
 
 Main:AddButton({
 	Name = "苹果",
 	Callback = function()
 game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Apple")
+end
 })
 
 Main:AddButton({
