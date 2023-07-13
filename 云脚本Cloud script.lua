@@ -194,18 +194,22 @@ Main:AddButton({
 	Name = "Bat",
 	Callback = function()
 game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Bat")
-})
+			end
+			})
 
 Main:AddButton({
 	Name = "泰迪熊",
 	Callback = function()
 game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("TeddyBloxpin")
+			end
 })
 
 Main:AddButton({
 	Name = "剑",
 	Callback = function()
 game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword")
+			end
+
 })
 Role:AddButton({
 	Name = "警察",
@@ -214,6 +218,7 @@ local A_1 = "Gun"
 local A_2 = true
 local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
 Event:FireServer(A_1, A_2)
+			end
 })
 
 Role:AddButton({
@@ -223,48 +228,60 @@ local A_1 = "SwatGun"
 local A_2 = true
 local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
 Event:FireServer(A_1, A_2)
+			end
+
 })
 
 Deliver:AddButton({
 	Name = "传送🗺️",
 	Callback = function()
-
-})
+print("Hello")
+			end
+			})
 
 Deliver:AddButton({
 	Name = "老板房间",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, -287, -1480)
+			end
 })
 
 Deliver:AddButton({
 	Name = "下水道",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(129, 3, -125)
+			end
+
 })
 
 Deliver:AddButton({
 	Name = "商店",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-422, 3, -121)
+			end
 })
 
 Deliver:AddButton({
 	Name = "顶楼",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16, 35, -220)
+			end
+
 })
 
 Deliver:AddButton({
 	Name = "房子",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 3, -200)
+			end
 })
 
 Deliver:AddButton({
 	Name = "地下室",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71, -15, -163)
+			end
+
 })
 
 elseif game.PlaceId == 1701332290 then
