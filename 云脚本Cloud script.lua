@@ -1,4 +1,4 @@
-local notificationGui = Instance.new("ScreenGui")
+ notificationGui = Instance.new("ScreenGui")
 notificationGui.Enabled = true  
 notificationGui.IgnoreGuiInset = true 
 
@@ -13,7 +13,7 @@ notificationText.Size = UDim2.new(1, 0, 1, 0)--大小
 notificationText.Position = UDim2.new(0, 0, 0, 0)--位置
 notificationText.BackgroundColor3 = Color3.new(1, 1, 1)--背景颜色3
 notificationText.TextColor3 = Color3.new(0, 0, 0)--文本颜色3
-notificationText.Text = "执行成功，云V1.51"
+notificationText.Text = "执行成功，云V1.53"
 notificationText.Font = Enum.Font.SourceSansBold
 notificationText.FontSize = Enum.FontSize.Size24
 notificationText.TextScaled = true
@@ -179,7 +179,7 @@ Main:AddButton({
 	Callback = function()
 game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cookie")
 
-
+end
 })
 
 Main:AddButton({
