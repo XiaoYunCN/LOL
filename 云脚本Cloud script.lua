@@ -37,8 +37,8 @@ animateNotification()
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "云",
-    Text = "云脚本正在加载",
+    Title = "云脚本",
+    Text = "成功注入器 等待加载",
     Duration = 5, 
 })
 print("Anti Afk On")
@@ -131,7 +131,7 @@ end
 
 CoreGui:SetCore("SendNotification", {
     Title = "作者 小云~",
-    Text = "QQ168777105",
+    Text = "已启反挂机（反AFK)",
     Duration = 5, 
 })
 
