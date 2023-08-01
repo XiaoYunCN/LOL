@@ -130,6 +130,12 @@ else --其他通用
 end
 
 CoreGui:SetCore("SendNotification", {
+    Title = "麻烦圈钱狗",
+    Text = "快手他妈的视频付费云脚本！",
+    Duration = 5, 
+})
+
+CoreGui:SetCore("SendNotification", {
     Title = "作者 小云~",
     Text = "已启反挂机（反AFK)",
     Duration = 5, 
