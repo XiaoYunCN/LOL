@@ -1,11 +1,3 @@
-local Notification =   loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-Notification.Notify("️作者小云，支持手机", "云脚本正在加载", "rbxassetid://10483855823", {
-    Duration = 5,       
-    Main = {
-        Rounding = true,
-    }
-});
-
  local UserInputService = game:GetService("UserInputService") 
  local TweenService = game:GetService("TweenService") 
  local RunService = game:GetService("RunService") 
