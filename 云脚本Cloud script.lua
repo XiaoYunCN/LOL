@@ -125,21 +125,16 @@ elseif game.PlaceId == 1701332290 then
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/LLL.lua", true))()
 else --其他通用
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E5%85%B6%E4%BB%96%E9%80%9A%E7%94%A8.lua"))()
+
+CoreGui:SetCore("SendNotification", {
+    Title = "云",
+    Text = "不支持服务器哦，去玩通用脚本吧",
+    Duration = 5, 
+})
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Cloud-script/main/2024-2-9%20Cloud%20script.lua", true))()
     
 end
-
-CoreGui:SetCore("SendNotification", {
-    Title = "麻烦圈钱狗",
-    Text = "快手他妈的视频付费云脚本！",
-    Duration = 5, 
-})
-
-CoreGui:SetCore("SendNotification", {
-    Title = "作者 小云~",
-    Text = "已启反挂机（反AFK)",
-    Duration = 5, 
-})
 
 coroutine.wrap(CGSLH_fake_script)()
 local function VIEO_fake_script() 
