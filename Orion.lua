@@ -1,4 +1,4 @@
- local UserInputService = game:GetService("UserInputService") 
+1 local UserInputService = game:GetService("UserInputService") 
  local TweenService = game:GetService("TweenService") 
  local RunService = game:GetService("RunService") 
  local LocalPlayer = game:GetService("Players").LocalPlayer 
@@ -1762,3 +1762,11 @@
  end 
   
  return OrionLib
+
+OrionLib:MakeNotification({ 
+ Name = "云脚本", 
+ Content = "等待加载", 
+ Image = "rbxassetid://4483345998", 
+ Time = 5 
+ })
+wait(1)
