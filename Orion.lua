@@ -1762,11 +1762,3 @@
  end 
   
  return OrionLib
-
-OrionLib:MakeNotification({ 
- Name = "云脚本", 
- Content = "等待加载", 
- Image = "rbxassetid://4483345998", 
- Time = 5 
- })
-wait(1)
