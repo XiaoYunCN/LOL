@@ -12,8 +12,8 @@ local OrionLib = {
     Flags = {},
     Themes = {
         Default = {
-            Main = Color3.fromRGB(25, 25, 25),
-            Second = Color3.fromRGB(32, 32, 32),
+            Main = Color3.fromRGB(0, 0, 0),
+            Second = Color3.fromRGB(5, 5, 5),
             Stroke = Color3.fromRGB(60, 60, 60),
             Divider = Color3.fromRGB(60, 60, 60),
             Text = Color3.fromRGB(240, 240, 240),
@@ -111,7 +111,10 @@ local function MakeDraggable(DragPoint, Main)
             AddConnection(
                 DragPoint.InputBegan,
                 function(Input)
-                    if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    if
+                        Input.UserInputType == Enum.UserInputType.MouseButton1 or
+                            Input.UserInputType == Enum.UserInputType.Touch
+                     then
                         Dragging = true
                         MousePos = Input.Position
                         FramePos = Main.Position
@@ -129,7 +132,10 @@ local function MakeDraggable(DragPoint, Main)
             AddConnection(
                 DragPoint.InputChanged,
                 function(Input)
-                    if Input.UserInputType == Enum.UserInputType.MouseMovement then
+                    if
+                        Input.UserInputType == Enum.UserInputType.MouseMovement or
+                            Input.UserInputType == Enum.UserInputType.Touch
+                     then
                         DragInput = Input
                     end
                 end
@@ -286,7 +292,8 @@ end
 local WhitelistedMouse = {
     Enum.UserInputType.MouseButton1,
     Enum.UserInputType.MouseButton2,
-    Enum.UserInputType.MouseButton3
+    Enum.UserInputType.MouseButton3,
+    Enum.UserInputType.Touch
 }
 local BlacklistedKeys = {
     Enum.KeyCode.Unknown,
@@ -564,7 +571,7 @@ function OrionLib:MakeNotification(NotificationConfig)
             local NotificationFrame =
                 SetChildren(
                 SetProps(
-                    MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 10),
+                    MakeElement("RoundFrame", Color3.fromRGB(0, 0, 0), 0, 10),
                     {
                         Parent = NotificationParent,
                         Size = UDim2.new(1, 0, 0, 0),
@@ -658,8 +665,8 @@ function OrionLib:Init()
                     LoadCfg(readfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt"))
                     OrionLib:MakeNotification(
                         {
-                            Name = "Configuration",
-                            Content = "Auto-loaded configuration for the game " .. game.GameId .. ".",
+                            Name = "配置",
+                            Content = "游戏的自动加载配置 " .. game.GameId .. ".",
                             Time = 5
                         }
                     )
@@ -1033,8 +1040,8 @@ function OrionLib:MakeWindow(WindowConfig)
             UIHidden = true
             OrionLib:MakeNotification(
                 {
-                    Name = "Interface Hidden",
-                    Content = "Tap RightShift to reopen the interface",
+                    Name = "界面隐藏",
+                    Content = "点击右移重新打开界面",
                     Time = 5
                 }
             )
@@ -1786,14 +1793,20 @@ function OrionLib:MakeWindow(WindowConfig)
 
                 SliderBar.InputBegan:Connect(
                     function(Input)
-                        if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            Input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                Input.UserInputType == Enum.UserInputType.Touch
+                         then
                             Dragging = true
                         end
                     end
                 )
                 SliderBar.InputEnded:Connect(
                     function(Input)
-                        if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            Input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                Input.UserInputType == Enum.UserInputType.Touch
+                         then
                             Dragging = false
                         end
                     end
@@ -1867,7 +1880,7 @@ function OrionLib:MakeWindow(WindowConfig)
                     AddThemeObject(
                     SetProps(
                         SetChildren(
-                            MakeElement("ScrollFrame", Color3.fromRGB(40, 40, 40), 4),
+                            MakeElement("ScrollFrame", Color3.fromRGB(0, 183, 255), 4),
                             {
                                 DropdownList
                             }
@@ -1985,7 +1998,7 @@ function OrionLib:MakeWindow(WindowConfig)
                             AddThemeObject(
                             SetProps(
                                 SetChildren(
-                                    MakeElement("Button", Color3.fromRGB(40, 40, 40)),
+                                    MakeElement("Button", Color3.fromRGB(0, 183, 255)),
                                     {
                                         MakeElement("Corner", 0, 6),
                                         AddThemeObject(
@@ -2218,7 +2231,10 @@ function OrionLib:MakeWindow(WindowConfig)
                 AddConnection(
                     Click.InputEnded,
                     function(Input)
-                        if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            Input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                Input.UserInputType == Enum.UserInputType.Touch
+                         then
                             if Bind.Binding then
                                 return
                             end
@@ -2756,7 +2772,10 @@ function OrionLib:MakeWindow(WindowConfig)
                 AddConnection(
                     Color.InputBegan,
                     function(input)
-                        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                input.UserInputType == Enum.UserInputType.Touch
+                         then
                             if ColorInput then
                                 ColorInput:Disconnect()
                             end
@@ -2783,7 +2802,10 @@ function OrionLib:MakeWindow(WindowConfig)
                 AddConnection(
                     Color.InputEnded,
                     function(input)
-                        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                input.UserInputType == Enum.UserInputType.Touch
+                         then
                             if ColorInput then
                                 ColorInput:Disconnect()
                             end
@@ -2794,7 +2816,10 @@ function OrionLib:MakeWindow(WindowConfig)
                 AddConnection(
                     Hue.InputBegan,
                     function(input)
-                        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                input.UserInputType == Enum.UserInputType.Touch
+                         then
                             if HueInput then
                                 HueInput:Disconnect()
                             end
@@ -2820,7 +2845,10 @@ function OrionLib:MakeWindow(WindowConfig)
                 AddConnection(
                     Hue.InputEnded,
                     function(input)
-                        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if
+                            input.UserInputType == Enum.UserInputType.MouseButton1 or
+                                input.UserInputType == Enum.UserInputType.Touch
+                         then
                             if HueInput then
                                 HueInput:Disconnect()
                             end
@@ -2967,11 +2995,7 @@ function OrionLib:MakeWindow(WindowConfig)
                     ),
                     AddThemeObject(
                         SetProps(
-                            MakeElement(
-                                "Label",
-                                "This part of the script is locked to Sirius Premium users. Purchase Premium in the Discord server (discord.gg/sirius)",
-                                12
-                            ),
+                            MakeElement("标签", "脚本的这一部分锁定给Sirius Premium用户。购买Discord服务器的额外费用(discord.gg/sirius)", 12),
                             {
                                 Size = UDim2.new(1, -200, 0, 14),
                                 Position = UDim2.new(0, 150, 0, 138),
