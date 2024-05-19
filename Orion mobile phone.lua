@@ -581,7 +581,7 @@ function OrionLib:MakeNotification(NotificationConfig)
                     }
                 ),
                 {
-                    MakeElement("Stroke", Color3.fromRGB(25, 25, 25), 1.2),
+                    MakeElement("Stroke", Color3.fromRGB(255, 255, 255), 1.2),
                     MakeElement("Padding", 12, 12, 12, 12),
                     SetProps(
                         MakeElement("Image", NotificationConfig.Image),
