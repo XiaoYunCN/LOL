@@ -1,4 +1,4 @@
-local UserInputService = game:GetService("UserInputService")
+ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
@@ -1512,7 +1512,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 ToggleConfig.Default = ToggleConfig.Default or false
                 ToggleConfig.Callback = ToggleConfig.Callback or function()
                     end
-                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
+                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(255, 255, 255)
                 ToggleConfig.Flag = ToggleConfig.Flag or nil
                 ToggleConfig.Save = ToggleConfig.Save or false
 
@@ -1693,7 +1693,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 SliderConfig.Callback = SliderConfig.Callback or function()
                     end
                 SliderConfig.ValueName = SliderConfig.ValueName or ""
-                SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(9, 149, 98)
+                SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(255, 255, 255)
                 SliderConfig.Flag = SliderConfig.Flag or nil
                 SliderConfig.Save = SliderConfig.Save or false
 
