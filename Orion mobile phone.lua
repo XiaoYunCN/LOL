@@ -1,4 +1,6 @@
- local UserInputService = game:GetService("UserInputService")
+--二改：小云 
+
+local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
@@ -1562,7 +1564,7 @@ function OrionLib:MakeWindow(WindowConfig)
                     AddThemeObject(
                     SetChildren(
                         SetProps(
-                            MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5),
+                            MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 5),
                             {
                                 Size = UDim2.new(1, 0, 0, 38),
                                 Parent = ItemParent
@@ -1880,7 +1882,7 @@ function OrionLib:MakeWindow(WindowConfig)
                     AddThemeObject(
                     SetProps(
                         SetChildren(
-                            MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 4),
+                            MakeElement("ScrollFrame", Color3.fromRGB(25, 25, 25), 4),
                             {
                                 DropdownList
                             }
