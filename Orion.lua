@@ -14,10 +14,10 @@ local OrionLib = {
         Default = {
             Main = Color3.fromRGB(0, 0, 0),
             Second = Color3.fromRGB(5, 5, 5),
-            Stroke = Color3.fromRGB(60, 60, 60),
-            Divider = Color3.fromRGB(60, 60, 60),
-            Text = Color3.fromRGB(240, 240, 240),
-            TextDark = Color3.fromRGB(150, 150, 150)
+            Stroke = Color3.fromRGB(255, 255, 255),
+            Divider = Color3.fromRGB(255, 255, 255),
+            Text = Color3.fromRGB(255, 255, 255),
+            TextDark = Color3.fromRGB(255, 255, 255)
         }
     },
     SelectedTheme = "Default",
@@ -581,7 +581,7 @@ function OrionLib:MakeNotification(NotificationConfig)
                     }
                 ),
                 {
-                    MakeElement("Stroke", Color3.fromRGB(93, 93, 93), 1.2),
+                    MakeElement("Stroke", Color3.fromRGB(255, 255, 255), 1.2),
                     MakeElement("Padding", 12, 12, 12, 12),
                     SetProps(
                         MakeElement("Image", NotificationConfig.Image),
@@ -608,7 +608,7 @@ function OrionLib:MakeNotification(NotificationConfig)
                             Font = Enum.Font.GothamSemibold,
                             Name = "Content",
                             AutomaticSize = Enum.AutomaticSize.Y,
-                            TextColor3 = Color3.fromRGB(200, 200, 200),
+                            TextColor3 = Color3.fromRGB(240, 240, 240),
                             TextWrapped = true
                         }
                     )
@@ -1512,7 +1512,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 ToggleConfig.Default = ToggleConfig.Default or false
                 ToggleConfig.Callback = ToggleConfig.Callback or function()
                     end
-                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
+                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(255, 255, 255)
                 ToggleConfig.Flag = ToggleConfig.Flag or nil
                 ToggleConfig.Save = ToggleConfig.Save or false
 
@@ -1562,7 +1562,7 @@ function OrionLib:MakeWindow(WindowConfig)
                     AddThemeObject(
                     SetChildren(
                         SetProps(
-                            MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5),
+                            MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 5),
                             {
                                 Size = UDim2.new(1, 0, 0, 38),
                                 Parent = ItemParent
@@ -1693,7 +1693,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 SliderConfig.Callback = SliderConfig.Callback or function()
                     end
                 SliderConfig.ValueName = SliderConfig.ValueName or ""
-                SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(9, 149, 98)
+                SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(255, 255, 255)
                 SliderConfig.Flag = SliderConfig.Flag or nil
                 SliderConfig.Save = SliderConfig.Save or false
 
@@ -1880,7 +1880,7 @@ function OrionLib:MakeWindow(WindowConfig)
                     AddThemeObject(
                     SetProps(
                         SetChildren(
-                            MakeElement("ScrollFrame", Color3.fromRGB(0, 183, 255), 4),
+                            MakeElement("ScrollFrame", Color3.fromRGB(25, 25, 25), 4),
                             {
                                 DropdownList
                             }
@@ -1998,7 +1998,7 @@ function OrionLib:MakeWindow(WindowConfig)
                             AddThemeObject(
                             SetProps(
                                 SetChildren(
-                                    MakeElement("Button", Color3.fromRGB(0, 183, 255)),
+                                    MakeElement("Button", Color3.fromRGB(255, 255, 255)),
                                     {
                                         MakeElement("Corner", 0, 6),
                                         AddThemeObject(
