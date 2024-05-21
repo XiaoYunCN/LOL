@@ -1,5 +1,3 @@
---二改：小云 
-
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -1514,7 +1512,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 ToggleConfig.Default = ToggleConfig.Default or false
                 ToggleConfig.Callback = ToggleConfig.Callback or function()
                     end
-                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(255, 255, 255)
+                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
                 ToggleConfig.Flag = ToggleConfig.Flag or nil
                 ToggleConfig.Save = ToggleConfig.Save or false
 
