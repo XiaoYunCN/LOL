@@ -1,10 +1,15 @@
+local CoreGui = game:GetService("StarterGui")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
-
+CoreGui:SetCore("SendNotification", {
+    Title = "小云开发者",
+    Text = "你好，你用我的ui😡",
+    Duration = 11, 
+})
 local OrionLib = {
         Elements = {},
         ThemeObjects = {},
