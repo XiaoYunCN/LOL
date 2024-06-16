@@ -9,7 +9,7 @@ CoreGui:SetCore("SendNotification", {
     Title = "小云开发者",
     Text = "你好，你用我的ui",
     Duration = 11, 
-}
+
 local OrionLib = {
         Elements = {},
         ThemeObjects = {},
